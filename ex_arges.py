@@ -41,7 +41,7 @@ def my_sorted_list(new_float1: float, new_float2: float):
     """function that gets 2 floats as parameter
      create a list from these 2 floats
      sort the list and print it"""
-    l2: list = [new_float1, new_float2]
+    l2: list[float] = [new_float1, new_float2]
     l2.sort()
     print("new sorted list:", l2)
 
