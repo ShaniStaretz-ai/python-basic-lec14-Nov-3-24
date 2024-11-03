@@ -14,5 +14,12 @@
           l1 = []
       ```
 * a function can return feedback- 1 value or more
+    * for metadata/ visualization added the type of the returned value:
+  ```
+  def half_num(num)->int: returned value from int type
+  .....
+  ```
+    * if not returns anything, add ->None
+    * if the function can return 2 types, add -> int|None - return int or return None
 
 ## extra subjects:
