@@ -5,13 +5,14 @@
 * functions-continue:
     * a function can receive parameters
         * sum(x:int,y:int): sum(3)-x=3, y has a default/sum(y=4)- x must have default
-        * can give default to the parameters (don't always have to give), default values can be given to all parameter or to the last ones.
+        * can give default to the parameters (don't always have to give), default values can be given to all parameter
+          or to the last ones.
         * if a parameter doesn't have a default it must be sent on the function's calling
         * the default parameter is None and add init to []:
       ```
        if l1 is None:
           l1 = []
       ```
-* a function can return feedback
+* a function can return feedback- 1 value or more
 
 ## extra subjects:
