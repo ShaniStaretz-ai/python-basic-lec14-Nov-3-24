@@ -31,7 +31,9 @@ def print_zugi(l1: list[int]) -> None:
 # ex e:
 def my_statistics(grades: list[int]) -> None:
     """accepts list of grades and prints the highest grade, the lowest grade, the number of grades, the average grade"""
-    if grades:
+    if not grades:
+        print("no grades to analyze")
+    else:
         print("highest grade:", max(grades))
         print("lowest grade:", min(grades))
         print("total grades:", len(grades))

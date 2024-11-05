@@ -1,11 +1,11 @@
 # ex a:
-def my_avg(number1: int, number2: int) -> float:
+def my_avg(number1: int=0, number2: int=0) -> float:
     """accepts 2 int parameters and returns a float of their average."""
     return (number1 + number2) / 2
 
 
 # ex b:
-def my_headline(str1: str) -> str:
+def my_headline(str1: str="") -> str:
     """accepts a parameter of type str and returns str of that string in uppercase letters with '!' at the end of the sentence."""
     return str1.upper() + '!'
 
