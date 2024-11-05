@@ -12,40 +12,52 @@ while number > 0:
     number //= 10
 print(f"{"True" if len(l_num) == l_num.count(origin_number % 10) else "False"}")
 
-#ex b:
+# ex b:
 
-x=int(input("enter origin price to pay (bigger then 0):"))
-list_2_pay=[]
-my_sum=0
-discount=0;
-while True:
-    discount+=10
-    if x>=100:
-        my_sum+=((100*(100-discount))/100)
-        x-=100
+x = int(input("enter origin price to pay (bigger then 0):"))
+final_discount = 0;
+match x:
+    case _ if 0 <= x <= 100:
+        final_discount = 10
+    case _ if 100 <= x <= 200:
+        final_discount = 20
+    case _ if 200 <= x <= 500:
+        final_discount = 30
+    case _ if 500 <= x <= 800:
+        final_discount = 40
+    case _:
+        print("invalid price")
+my_sum = 0
+discount = 10
+while discount <= final_discount:
+
+    if x >= 100:
+        print((100 * (100 - discount)) / 100)
+        my_sum += ((100 * (100 - discount)) / 100)
+        x -= 100
+        discount += 10
     else:
-        my_sum +=((x * (100 - discount)) / 100)
+        my_sum += ((x * (100 - discount)) / 100)
         break
 if my_sum:
-    print("total after discount:",my_sum)
+    print("total after discount:", my_sum)
 
-#ex c:
+# ex c:
 
-num1=float(input("enter decimal number:"))
-num2=float(input("enter decimal number:"))
-num3=float(input("enter decimal number:"))
-if num1+num2==num3 or num1+num3==num2 or num3+num2==num1:
+num1 = float(input("enter decimal number:"))
+num2 = float(input("enter decimal number:"))
+num3 = float(input("enter decimal number:"))
+if num1 + num2 == num3 or num1 + num3 == num2 or num3 + num2 == num1:
     print("True")
 else:
     print("False")
 
-
-#ex d:
-char_list=[]
-word=input("enter a word:")
+# ex d:
+char_list = []
+word = input("enter a word:")
 while True:
-    char=input("enter char: ")
-    if char=="*":
+    char = input("enter char: ")
+    if char == "*":
         break
     char_list.append(char)
 
@@ -53,9 +65,9 @@ for c in char_list:
     if not c in word:
         print("False")
 
-    word= word.replace(c, '')
+    word = word.replace(c, '')
 else:
-    if len(word)>0:
+    if len(word) > 0:
         print("False")
     else:
         print("True")
