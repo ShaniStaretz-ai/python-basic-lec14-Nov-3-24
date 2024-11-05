@@ -6,7 +6,7 @@ while True:
         continue;
     break;
 l_num: list[int] = []
-origin_number:int = number
+origin_number: int = number
 while number > 0:
     l_num.append(number % 10)
     number //= 10
@@ -30,15 +30,12 @@ match x:
 my_sum = 0
 discount = 10
 while discount <= final_discount:
-
     if x >= 100:
-        print((100 * (100 - discount)) / 100)
         my_sum += ((100 * (100 - discount)) / 100)
         x -= 100
-        discount += 10
     else:
         my_sum += ((x * (100 - discount)) / 100)
-        break
+    discount += 10
 if my_sum:
     print("total after discount:", my_sum)
 
